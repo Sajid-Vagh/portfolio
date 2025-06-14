@@ -15,11 +15,46 @@ body {
     font-family: 'Parisienne', cursive;
 	margin-bottom: 15px;
 }
-/* 
-.subtitle:hover {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em;
-} */
+
+.filters-button-group {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 12px;
+    background-color: rgba(25, 25, 25, 0.8); /* Dark semi-transparent background */
+    border-radius: 50px; /* Makes the container a pill shape */
+    display: inline-block; /* Helps with centering */
+    border: 1px solid #333;
+    backdrop-filter: blur(5px); /* Optional: nice blur effect */
+}
+
+/* Individual button styling */
+.filters-button-group .button {
+    background-color: transparent; /* No background by default */
+    color: #b0b0b0; /* Light grey text for inactive buttons */
+    border: 1px solid transparent; /* No visible border by default */
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 25px; /* Makes buttons pill-shaped */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Smooth transition for color and background */
+    outline: none;
+}
+
+/* Style for when you hover over a button */
+.filters-button-group .button:hover {
+    color: #ffffff; /* White text on hover */
+    border-color: #555;
+}
+
+/* Style for the currently ACTIVE/SELECTED button */
+.filters-button-group .button.is-checked {
+    background-color: #f0f0f0; /* Light background for the active button */
+    color: #111111; /* Dark text for the active button */
+    border-color: #f0f0f0;
+    font-weight: 700;
+}
 
 .grid-item {
     display: inline-block;

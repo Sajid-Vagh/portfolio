@@ -7,6 +7,19 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+
+element.style{
+  min-height: 300px;
+    min-width: 300px;
+    margin: -63px;
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.w3-col.l7 {
+        padding-top: 211px;
+        width: 58.33333%;
+}
 :root{
     --primary-color:burlywood;
     --bg-color: #232323dd;
