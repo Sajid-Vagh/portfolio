@@ -1657,7 +1657,7 @@ function () {
     this.setSize();
     root.addResizeCallback(function () {
       _this.setSize();
-    }); // this.background = new Background()
+    });  this.background = new Background()
 
     this.text = new $m6Ky$export$default();
     this.shootingStar = new $a87C$export$default();
@@ -1752,4 +1752,10 @@ setTimeout(function () {
 return {
   "Focm": {}
 };
+});
+// FIND THIS CODE
+var root = this.root = $mrfc$export$default.root = new $pTw7$export$default({
+  isDev: true,
+  // ... other settings ...
+  canvas: canvas
 });

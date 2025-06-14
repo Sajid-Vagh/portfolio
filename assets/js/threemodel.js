@@ -25,8 +25,8 @@
         
             // Init the scene
             scene = new THREE.Scene();
-        //   scene.background = new THREE.Color(backgroundColor);
-        //   scene.fog = new THREE.Fog(backgroundColor, 60, 100);
+           scene.background = new THREE.Color(backgroundColor);
+           scene.fog = new THREE.Fog(backgroundColor, 60, 100);
             
             // Init the renderer
             renderer = new THREE.WebGLRenderer({ canvas, antialias: true });

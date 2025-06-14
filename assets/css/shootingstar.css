@@ -12,10 +12,10 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-}
+/* }
 body.o-start #canvas {
   /* cursor: none; */
-}
+} */
 
 #message {
   position: absolute;
