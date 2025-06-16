@@ -1,44 +1,43 @@
-/* assets/css/cursor.css */
+/* --- Custom Cursor and Particle Effect CSS --- */
 
-/* body {
-  cursor: none;
-} */
-
-.cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background-color: #f5b324;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.1s ease-out, opacity 0.3s ease;
+/* Hide the default system cursor */
+body {
+    cursor: none;
 }
 
-.cursor-circle {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #f5b324;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s ease, height 0.4s ease, opacity 0.4s ease, border-color 0.4s ease;
+/* For interactive elements, show a pointer to hint at the change */
+a, button, .scroll-button, .menu-btn, .cancel-btn, [onclick], .grid-item, input[type="checkbox"], .filter-button-group li {
+    cursor: pointer;
 }
 
-.cursor-circle.hovered {
-  width: 60px;
-  height: 60px;
-  opacity: 0.5;
-  border-color: #fff;
+/* The canvas for the particle trail effect */
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998; /* High z-index but below the cursor itself */
+    pointer-events: none; /* Allows clicks to pass through to elements underneath */
 }
 
-.cursor-dot.hovered {
-    opacity: 0;
+/* The custom cursor element (the ring) */
+#custom-cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(255, 223, 0, 0.9); /* Gold color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+    pointer-events: none;
+    z-index: 9999; /* Keep it on top of everything */
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, border-width 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* A class added via JS when hovering over links/buttons */
+body.link-hover #custom-cursor {
+    width: 35px;
+    height: 35px;
+    border-width: 3px;
+    border-color: rgba(255, 255, 255, 1); /* Becomes a larger white ring */
 }
