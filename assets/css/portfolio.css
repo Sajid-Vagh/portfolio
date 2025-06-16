@@ -2,7 +2,7 @@ body {
 	/* background: linear-gradient(264deg, rgba(23,23,23,1) 0%, rgba(33,33,33,1) 49%, rgba(23,23,23,1) 100%); */
 	font-family: 'Open Sans', sans-serif;
 	margin: 0; 
-  cursor: none;
+  /* cursor: none; */
 }
 #container {
   margin: auto;
